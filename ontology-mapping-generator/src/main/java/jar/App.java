@@ -108,7 +108,7 @@ public class App {
     }
 
     public static JSONObject loadConfigFile() {
-        String path = new File("").getAbsolutePath().concat("\\config.json");
+        String path = "config.json";
         try ( Reader reader = new FileReader(path)) {
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(reader);
