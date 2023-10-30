@@ -40,7 +40,7 @@ public class App {
 
         System.out.println("Creating mapping threads...");
 
-        int coreCount = Runtime.getRuntime().availableProcessors();
+        int coreCount = Runtime.getRuntime().availableProcessors() - 1;
         int chunkSize = Math.abs(sourceOnt.termCount() / coreCount);
         double remainder = Math.ceil(sourceOnt.termCount() % coreCount);
 
